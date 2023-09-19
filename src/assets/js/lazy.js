@@ -1,6 +1,6 @@
 const images = document.querySelectorAll(".lazy__load");
 
-function handleIntersection(entries, observer) {
+function handleIntersection(entries) {
   entries.forEach((entry) => {
     const image = entry.target;
 
