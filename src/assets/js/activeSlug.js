@@ -1,6 +1,6 @@
 const setupObserver = () => {
   const isMobile = window.innerWidth < 750;
-  const threshold = isMobile ? [0.8] : [0.5]; // Adjust the default threshold as needed
+  const threshold = isMobile ? [2] : [0.5]; // Adjust the default threshold as needed
 
   const options = {
     root: null,
