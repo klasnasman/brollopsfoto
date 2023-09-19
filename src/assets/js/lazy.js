@@ -18,7 +18,7 @@ function handleIntersection(entries, observer) {
 const observer = new IntersectionObserver(handleIntersection, {
   root: null,
   rootMargin: "0px",
-  threshold: 0.5,
+  threshold: 0.3,
 });
 
 images.forEach((image) => {
