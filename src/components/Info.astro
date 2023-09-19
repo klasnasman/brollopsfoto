@@ -1,0 +1,43 @@
+---
+export interface Props {
+  Content: any;
+}
+
+const { Content } = Astro.props;
+const currentPath = Astro.url.pathname;
+const couple = currentPath === "/";
+---
+
+<section id="info" class="flow">
+  <div class="information flow">
+    <p class="heading">{couple ? "Biography" : "Info"}</p>
+    <Content />
+  </div>
+  {
+    couple && (
+      <div class="contact">
+        <p>
+          <em>
+            klas@gmail.com,{" "}
+            <a href="https://www.instagram.com/klasnasman/">@klasnasman</a>
+          </em>
+        </p>
+      </div>
+    )
+  }
+</section>
+
+<style>
+  #info {
+    width: var(--container-width);
+    margin-block-start: var(--spacer-xl);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .heading {
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>

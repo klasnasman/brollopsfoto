@@ -1,0 +1,92 @@
+---
+import { getCollection } from "astro:content";
+
+const currentPath = Astro.url.pathname;
+const projects = await getCollection("wedding");
+---
+
+<section class="projects">
+  <div class="projects__list">
+    <p class="projects__heading">Index</p>
+    {
+      projects.map((project) => (
+        <a
+          class={`projects__link link ${
+            currentPath === `/wedding/${project.slug}/` ? "active" : ""
+          }`}
+          href={`/wedding/${project.slug}`}>
+          <div class="projects__title">{project.data.title}</div>
+          <div class="projects__type">
+            <em>{project.data.location}</em>
+          </div>
+          <img class="projects__image" src={project.data.thumb.src} alt="" />
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .projects {
+    display: flex;
+    flex-direction: column;
+    width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-block: var(--spacer-xxl);
+  }
+
+  .projects__heading {
+    padding-block-end: var(--spacer-s);
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (width<= 800px) {
+    .projects__heading {
+      padding-inline: var(--spacer-m);
+    }
+  }
+
+  .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .projects__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+
+  .projects__image {
+    display: none;
+    z-index: 200;
+  }
+
+  .projects__link:hover .projects__image {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+  }
+
+  @media (width<= 800px) {
+    .projects__link:hover .projects__image {
+      left: 50%;
+    }
+  }
+
+  .link {
+    position: relative;
+    text-decoration: none;
+    background-color: inherit;
+    transition: background var(--ease-0);
+  }
+</style>

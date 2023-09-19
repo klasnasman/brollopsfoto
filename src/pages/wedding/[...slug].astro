@@ -1,0 +1,102 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ProjectList from "@components/ProjectList.astro";
+import Modal from "@components/Modal.astro";
+import Info from "@components/Info.astro";
+import Header from "@components/Header.astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  entry: CollectionEntry<"wedding">;
+}
+
+export async function getStaticPaths() {
+  const wedding = await getCollection("wedding");
+  return wedding.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const photos = entry.data.images;
+---
+
+<BaseLayout title={`${entry.data.title}`}>
+  <Modal first={entry.data.title} second={entry.data.location} />
+  <div class="index__container">
+    <Header title={""} />
+    {
+      photos.map((photo) => (
+        <section class="index__section">
+          <a id={entry.data.title}>
+            <Image
+              class="index__img lazy__load"
+              src={photo}
+              alt="descriptive text"
+              width={1200}
+            />
+          </a>
+        </section>
+      ))
+    }
+  </div>
+  <Info Content={Content} />
+  <ProjectList />
+</BaseLayout>
+<style>
+  .index__container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-inline: var(--images-inline);
+  }
+
+  @media (width <=750px) {
+    .index__container {
+      margin-inline: unset;
+    }
+  }
+
+  .index__container > section:first-of-type {
+    min-height: 100dvh;
+  }
+
+  .index__container > section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 80vh;
+    min-height: 80svh;
+    width: 100%;
+  }
+
+  .index__container > section:nth-child(even) {
+    justify-content: flex-start;
+  }
+
+  @media (width <=750px) {
+    .index__container > section {
+      justify-content: center;
+      gap: 1rem 0rem;
+      margin-block-end: 12rem;
+    }
+  }
+
+  .index__img {
+    min-width: inherit;
+    min-height: inherit;
+    max-height: auto;
+    max-width: 600px;
+    object-fit: contain;
+  }
+
+  @media (width <=750px) {
+    .index__img {
+      max-width: 100%;
+    }
+  }
+</style>

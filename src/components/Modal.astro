@@ -1,0 +1,36 @@
+---
+export interface Props {
+  first: string;
+  second: string;
+}
+
+const { first, second } = Astro.props;
+---
+
+<div class="modal">
+  <p>{first}</p>
+  <p>{second}</p>
+</div>
+
+<style>
+  .modal {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: var(--container-width);
+    left: calc((100% - var(--container-width)) / 2);
+    top: calc((50% - var(--header-height)));
+    font-size: var(--step-1);
+    transition:
+      opacity 0.8s cubic-bezier(0, 0, 0.6, 1),
+      filter 0.8s cubic-bezier(0, 0, 0.6, 1);
+    opacity: 1;
+    filter: blur(0px);
+    z-index: 1;
+  }
+
+  .modal.close {
+    opacity: 0;
+    filter: blur(10px);
+  }
+</style>

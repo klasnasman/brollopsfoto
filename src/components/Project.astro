@@ -1,0 +1,77 @@
+---
+import Header from "@components/Header.astro";
+
+export interface Props {
+  slugId: string;
+  photos: { src: string; width?: number; height?: number; format: string }[];
+}
+
+const { slugId, photos } = Astro.props;
+---
+
+<div class="index__container">
+  <Header title={""} />
+  {
+    photos.map((photo) => (
+      <section class="index__section lazy__load">
+        <a id={slugId}>
+          <img class="index__img" src={photo.src} alt="" />
+        </a>
+      </section>
+    ))
+  }
+</div>
+<style>
+  .index__container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin-inline: var(--images-inline);
+  }
+
+  @media (width <=750px) {
+    .index__container {
+      margin-inline: unset;
+    }
+  }
+
+  .index__container > section:first-of-type {
+    min-height: 100dvh;
+  }
+
+  .index__container > section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 80vh;
+    min-height: 80svh;
+    width: 100%;
+  }
+
+  .index__container > section:nth-child(even) {
+    justify-content: flex-start;
+  }
+
+  @media (width <=750px) {
+    .index__container > section {
+      justify-content: center;
+      gap: 1rem 0rem;
+      margin-block-end: 12rem;
+    }
+  }
+
+  .index__img {
+    min-width: inherit;
+    min-height: inherit;
+    max-height: auto;
+    max-width: 500px;
+    object-fit: contain;
+  }
+
+  @media (width <=750px) {
+    .index__img {
+      max-width: 100%;
+    }
+  }
+</style>
