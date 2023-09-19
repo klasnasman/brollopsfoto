@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 const currentPath = Astro.url.pathname;
@@ -19,7 +20,12 @@ const projects = await getCollection("wedding");
           <div class="projects__type">
             <em>{project.data.location}</em>
           </div>
-          <img class="projects__image" src={project.data.thumb.src} alt="" />
+          <Image
+            class="projects__image"
+            src={project.data.thumb}
+            alt="descriptive text"
+            width={360}
+          />
         </a>
       ))
     }
