@@ -21,6 +21,7 @@ const { first, second } = Astro.props;
     left: calc((100% - var(--container-width)) / 2);
     top: calc((50% - var(--header-height)));
     font-size: var(--step-1);
+    mix-blend-mode: difference;
     transition:
       opacity 0.8s cubic-bezier(0, 0, 0.6, 1),
       filter 0.8s cubic-bezier(0, 0, 0.6, 1),
