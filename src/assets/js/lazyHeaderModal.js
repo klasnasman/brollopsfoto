@@ -4,7 +4,7 @@ const scrollThreshold = 0;
 let isContainerVisible = false;
 
 const images = document.querySelectorAll(".lazy__load");
-const lazyLoadMargin = 50;
+const lazyLoadMargin = 20;
 
 function updateVisibility() {
   const scrollY = window.scrollY;
