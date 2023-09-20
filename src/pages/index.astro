@@ -19,14 +19,16 @@ const { Content } = await entry.render();
     <section class="index__section">
       {
         weddings.map((entry) => (
-          <a id={entry.data.title} href={`/wedding/${entry.slug}`}>
-            <Image
-              class="index__img lazy__load"
-              src={entry.data.thumb}
-              alt="Wedding Photo, couple"
-              width={1200}
-            />
-          </a>
+          <div>
+            <a id={entry.data.title} href={`/wedding/${entry.slug}`}>
+              <Image
+                class="index__img lazy__load"
+                src={entry.data.thumb}
+                alt="Wedding Photo, couple"
+                width={1200}
+              />
+            </a>
+          </div>
         ))
       }
     </section>
@@ -46,20 +48,19 @@ const { Content } = await entry.render();
     }
   }
 
-  .index__section a {
+  .index__section div {
     display: grid;
+    align-items: center;
+    justify-content: flex-start;
   }
 
-  /*  .index__section > * {
-    min-height: 100dvh;
-  } */
-  .index__section > * {
+  .index__section > div {
     min-height: 80dvh;
   }
-  .index__section a:first-of-type {
+  .index__section div:first-of-type {
     min-height: 100dvh;
   }
-  .index__section > a:nth-child(even) {
+  .index__section > div:nth-child(even) {
     justify-content: flex-end;
   }
 

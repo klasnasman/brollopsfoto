@@ -1,36 +1,10 @@
 const header = document.querySelector(".header");
 const modal = document.querySelector(".modal");
+const scrollThreshold = 0;
 let isContainerVisible = false;
-const scrollThreshold = 10;
 
 const images = document.querySelectorAll(".lazy__load");
 const lazyLoadMargin = 50;
-
-const setupObserver = () => {
-  const isMobile = window.innerWidth < 750;
-  const threshold = isMobile ? [1] : [0.5]; // Adjust the default threshold as needed
-
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: threshold,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    const visibleSlug = document.getElementById("visibleSlug");
-
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const visibleElementId = entry.target.id;
-        visibleSlug.textContent = visibleElementId || "";
-      }
-    });
-  }, options);
-
-  document.querySelectorAll("a[id]").forEach((element) => {
-    observer.observe(element);
-  });
-};
 
 function updateVisibility() {
   const scrollY = window.scrollY;
@@ -66,7 +40,6 @@ function checkScroll() {
 document.addEventListener("DOMContentLoaded", () => {
   updateVisibility();
   checkScroll();
-  setupObserver();
 });
 
 let debounceTimer;
