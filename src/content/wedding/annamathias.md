@@ -1,6 +1,7 @@
 ---
 title: Anna + Mathias
-location: Väddö
+location: Muskö
+date: 2019-09-09
 images:
   - ../../assets/wedding/annamathias/01.jpeg
   - ../../assets/wedding/annamathias/02.jpeg

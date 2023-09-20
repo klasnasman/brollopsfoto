@@ -1,6 +1,7 @@
 ---
 title: Agnes + Peter
-location: Väddö
+location: Vässarö
+date: 2019-09-29
 images:
   - ../../assets/wedding/agnespeter/01.jpeg
   - ../../assets/wedding/agnespeter/02.jpeg

@@ -1,6 +1,7 @@
 ---
 title: Emma + Jonas
-location: Väddö
+location: St. Annas skärgård
+date: 2019-06-01
 images:
   - ../../assets/wedding/emmajonas/03.jpeg
   - ../../assets/wedding/emmajonas/04.jpeg

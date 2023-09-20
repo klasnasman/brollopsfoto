@@ -1,6 +1,7 @@
 ---
 title: Tove + Erik
-location: Väddö
+location: Storhogna
+date: 2018-09-10
 images:
   - ../../assets/wedding/toveerik/01.jpeg
   - ../../assets/wedding/toveerik/02.jpeg
