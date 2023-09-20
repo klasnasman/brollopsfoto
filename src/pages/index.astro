@@ -50,10 +50,15 @@ const { Content } = await entry.render();
     display: grid;
   }
 
+  /*  .index__section > * {
+    min-height: 100dvh;
+  } */
   .index__section > * {
+    min-height: 80dvh;
+  }
+  .index__section a:first-of-type {
     min-height: 100dvh;
   }
-
   .index__section > a:nth-child(even) {
     justify-content: flex-end;
   }
