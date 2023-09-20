@@ -76,5 +76,5 @@ window.addEventListener("scroll", () => {
   debounceTimer = setTimeout(() => {
     updateVisibility();
     checkScroll();
-  }, 20);
+  }, 0);
 });
