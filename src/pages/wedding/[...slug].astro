@@ -22,15 +22,16 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const photos = entry.data.images;
+console.log(photos);
 ---
 
 <BaseLayout title={`${entry.data.title}`}>
   <Modal first={entry.data.title} second={entry.data.location} />
   <div class="index__container">
     <Header title={""} />
-    {
-      photos.map((photo) => (
-        <section class="index__section">
+    <section class="index__section">
+      {
+        photos.map((photo) => (
           <a id={entry.data.title}>
             <Image
               class="index__img lazy__load"
@@ -39,19 +40,16 @@ const photos = entry.data.images;
               width={1200}
             />
           </a>
-        </section>
-      ))
-    }
+        ))
+      }
+    </section>
   </div>
   <Info Content={Content} />
   <ProjectList />
 </BaseLayout>
+
 <style>
   .index__container {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
     margin-inline: var(--images-inline);
   }
 
@@ -61,21 +59,20 @@ const photos = entry.data.images;
     }
   }
 
-  .index__container > section:first-of-type {
+  .index__section a {
+    display: grid;
+  }
+
+  .index__section > a:first-child {
     min-height: 100dvh;
   }
 
-  .index__container > section {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    min-height: 80vh;
-    min-height: 80svh;
-    width: 100%;
+  .index__section > *:not(:first-child) {
+    margin-bottom: 200px;
   }
 
-  .index__container > section:nth-child(even) {
-    justify-content: flex-start;
+  .index__section > a:nth-child(even) {
+    justify-content: flex-end;
   }
 
   @media (width <=750px) {
@@ -89,7 +86,7 @@ const photos = entry.data.images;
   .index__img {
     min-width: inherit;
     min-height: inherit;
-    max-height: auto;
+    max-height: 600px;
     max-width: 600px;
     object-fit: contain;
   }
