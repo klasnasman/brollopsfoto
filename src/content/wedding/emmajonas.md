@@ -2,8 +2,10 @@
 title: Emma + Jonas
 location: Väddö
 images:
-  - ../../assets/wedding/emmajonas/03-575af0a891.jpeg
-thumb: ../../assets/wedding/emmajonas/04-39ac9cbf2d.jpeg
+  - ../../assets/wedding/emmajonas/03.jpeg
+  - ../../assets/wedding/emmajonas/04.jpeg
+  - ../../assets/wedding/emmajonas/05.jpeg
+thumb: ../../assets/wedding/emmajonas/04.jpeg
 ---
 
 Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.

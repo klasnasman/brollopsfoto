@@ -2,8 +2,11 @@
 title: Lisa + Alexander
 location: Väddö
 images:
-  - ../../assets/wedding/lisaalexander/01-0dcd27c6f8.jpeg
-thumb: ../../assets/wedding/lisaalexander/14-4e1f49afa9.jpeg
+  - ../../assets/wedding/lisaalexander/01.jpeg
+  - ../../assets/wedding/lisaalexander/02.jpeg
+  - ../../assets/wedding/lisaalexander/03.jpeg
+  - ../../assets/wedding/lisaalexander/04.jpeg
+thumb: ../../assets/wedding/lisaalexander/14.jpeg
 ---
 
 Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.

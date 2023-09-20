@@ -2,8 +2,10 @@
 title: Anna + Mathias
 location: Väddö
 images:
-  - ../../assets/wedding/annamathias/01-781e142706.jpeg
-thumb: ../../assets/wedding/annamathias/19-3614c9209a.jpeg
+  - ../../assets/wedding/annamathias/01.jpeg
+  - ../../assets/wedding/annamathias/02.jpeg
+  - ../../assets/wedding/annamathias/03.jpeg
+thumb: ../../assets/wedding/annamathias/19.jpeg
 ---
 
 Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.

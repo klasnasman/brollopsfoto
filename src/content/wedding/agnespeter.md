@@ -2,8 +2,10 @@
 title: Agnes + Peter
 location: Väddö
 images:
-  - ../../assets/wedding/agnespeter/01-a8cf385aa9.jpeg
-thumb: ../../assets/wedding/agnespeter/29-576cb73f91.jpeg
+  - ../../assets/wedding/agnespeter/01.jpeg
+  - ../../assets/wedding/agnespeter/02.jpeg
+  - ../../assets/wedding/agnespeter/06.jpeg
+thumb: ../../assets/wedding/agnespeter/29.jpeg
 ---
 
 Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.

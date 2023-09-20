@@ -2,8 +2,10 @@
 title: Tove + Erik
 location: Väddö
 images:
-  - ../../assets/wedding/toveerik/01-804976088b.jpeg
-thumb: ../../assets/wedding/toveerik/02-0d9e29cf8f.jpeg
+  - ../../assets/wedding/toveerik/01.jpeg
+  - ../../assets/wedding/toveerik/02.jpeg
+  - ../../assets/wedding/toveerik/03.jpeg
+thumb: ../../assets/wedding/toveerik/02.jpeg
 ---
 
 Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.

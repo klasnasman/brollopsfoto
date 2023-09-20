@@ -2,9 +2,12 @@
 title: Linda + Theodor
 location: Väddö
 images:
-  - ../../assets/wedding/lindatheodor/02-932685ad7d.jpeg
-  - ../../assets/wedding/lindatheodor/08-8d0b947cce.jpeg
-thumb: ../../assets/wedding/lindatheodor/17-11f502dbb3.jpeg
+  - ../../assets/wedding/lindatheodor/02.jpeg
+  - ../../assets/wedding/lindatheodor/04.jpeg
+  - ../../assets/wedding/lindatheodor/05.jpeg
+  - ../../assets/wedding/lindatheodor/07.jpeg
+  - ../../assets/wedding/lindatheodor/08.jpeg
+thumb: ../../assets/wedding/lindatheodor/17.jpeg
 ---
 
 Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.
