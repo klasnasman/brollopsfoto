@@ -1,26 +1,27 @@
 const images = document.querySelectorAll(".lazy__load");
 
-function handleIntersection(entries) {
-  entries.forEach((entry) => {
-    const image = entry.target;
+function checkScroll() {
+  const margin = 20;
+  if (images.length === 0) {
+    return;
+  }
+  for (const image of images) {
+    const rect = image.getBoundingClientRect();
+    const isTopVisible =
+      rect.top + rect.height / 2 < window.innerHeight + margin;
+    const isBottomVisible = rect.bottom - rect.height / 2 > margin;
+    const hasNoSrc = !image.src;
 
-    if (entry.isIntersecting) {
-      if (!image.src && image.dataset.src) {
+    if (isTopVisible && isBottomVisible) {
+      if (hasNoSrc && image.dataset.src) {
         image.src = image.dataset.src;
       }
       image.classList.add("lazy__load-active");
     } else {
       image.classList.remove("lazy__load-active");
     }
-  });
+  }
 }
 
-const observer = new IntersectionObserver(handleIntersection, {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.3,
-});
-
-images.forEach((image) => {
-  observer.observe(image);
-});
+checkScroll();
+window.addEventListener("scroll", checkScroll);
