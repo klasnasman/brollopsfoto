@@ -1,7 +1,7 @@
 const header = document.querySelector(".header");
 const modal = document.querySelector(".modal");
 let isContainerVisible = false;
-const scrollThreshold = 50;
+const scrollThreshold = 10;
 
 const images = document.querySelectorAll(".lazy__load");
 const lazyLoadMargin = 50;
