@@ -22,9 +22,9 @@ const { first, second } = Astro.props;
     top: calc((50% - var(--header-height)));
     font-size: var(--step-1);
     transition:
-      opacity 0.8s cubic-bezier(0, 0, 0.6, 1),
-      filter 0.8s cubic-bezier(0, 0, 0.6, 1),
-      z-index 0.8s cubic-bezier(0, 0, 0.6, 1);
+      opacity var(--ease-0) ease-out,
+      filter var(--ease-0) ease-out,
+      z-index var(--ease-0) ease-out;
     opacity: 1;
     filter: blur(0px);
     z-index: 1;
