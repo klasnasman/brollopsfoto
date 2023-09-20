@@ -23,7 +23,8 @@ const { first, second } = Astro.props;
     font-size: var(--step-1);
     transition:
       opacity 0.8s cubic-bezier(0, 0, 0.6, 1),
-      filter 0.8s cubic-bezier(0, 0, 0.6, 1);
+      filter 0.8s cubic-bezier(0, 0, 0.6, 1),
+      z-index 0.8s cubic-bezier(0, 0, 0.6, 1);
     opacity: 1;
     filter: blur(0px);
     z-index: 1;
@@ -32,5 +33,6 @@ const { first, second } = Astro.props;
   .modal.close {
     opacity: 0;
     filter: blur(10px);
+    z-index: -1;
   }
 </style>
