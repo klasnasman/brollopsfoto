@@ -3,8 +3,7 @@ title: Agnes + Peter
 location: Vässarö
 date: 2019-09-29
 images:
-  - ../../assets/wedding/agnespeter/01.jpeg
-  - ../../assets/wedding/agnespeter/02.jpeg
+  - ../../assets/wedding/agnespeter/01.png
   - ../../assets/wedding/agnespeter/06.jpeg
   - ../../assets/wedding/agnespeter/09.jpeg
   - ../../assets/wedding/agnespeter/12.jpeg
