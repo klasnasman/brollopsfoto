@@ -7,7 +7,6 @@ images:
   - ../../assets/wedding/agnespeter/02.jpeg
   - ../../assets/wedding/agnespeter/06.jpeg
   - ../../assets/wedding/agnespeter/09.jpeg
-  - ../../assets/wedding/agnespeter/11.jpeg
   - ../../assets/wedding/agnespeter/12.jpeg
   - ../../assets/wedding/agnespeter/14.jpeg
   - ../../assets/wedding/agnespeter/15.jpeg
@@ -15,7 +14,7 @@ images:
 thumb: ../../assets/wedding/agnespeter/29.jpeg
 ---
 
-Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
 Accusantium fugiat ipsam praesentium, provident impedit at odio sed libero
 similique ab, voluptates distinctio excepturi, ad hic? Necessitatibus quae
 ipsum aut iure. Numquam voluptas, itaque omnis laboriosam, deserunt vitae odio
