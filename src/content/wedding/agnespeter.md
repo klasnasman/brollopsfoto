@@ -6,6 +6,12 @@ images:
   - ../../assets/wedding/agnespeter/01.jpeg
   - ../../assets/wedding/agnespeter/02.jpeg
   - ../../assets/wedding/agnespeter/06.jpeg
+  - ../../assets/wedding/agnespeter/09.jpeg
+  - ../../assets/wedding/agnespeter/11.jpeg
+  - ../../assets/wedding/agnespeter/12.jpeg
+  - ../../assets/wedding/agnespeter/14.jpeg
+  - ../../assets/wedding/agnespeter/15.jpeg
+  - ../../assets/wedding/agnespeter/17.jpeg
 thumb: ../../assets/wedding/agnespeter/29.jpeg
 ---
 
