@@ -6,16 +6,30 @@ let isContainerVisible = false;
 const images = document.querySelectorAll(".lazy__load");
 const lazyLoadMargin = 20;
 
-function updateVisibility() {
+function isScrolledToBottom() {
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+
+  return scrollY + windowHeight >= documentHeight - scrollThreshold;
+}
+
+function headerModalToggle() {
   const scrollY = window.scrollY;
   const isVisible = scrollY <= scrollThreshold;
 
   header.classList.toggle("open", !isVisible);
+  modal.classList.toggle("bottom", isScrolledToBottom() && !isVisible);
   modal.classList.toggle("close", !isVisible);
   isContainerVisible = isVisible;
+
+  if (isScrolledToBottom() && !isContainerVisible) {
+    modal.classList.toggle("close");
+    isContainerVisible = true;
+  }
 }
 
-function checkScroll() {
+function lazyLoad() {
   if (images.length === 0) {
     return;
   }
@@ -38,8 +52,8 @@ function checkScroll() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  updateVisibility();
-  checkScroll();
+  headerModalToggle();
+  lazyLoad();
 });
 
 let debounceTimer;
@@ -47,7 +61,7 @@ let debounceTimer;
 window.addEventListener("scroll", () => {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
-    updateVisibility();
-    checkScroll();
+    headerModalToggle();
+    lazyLoad();
   }, 0);
 });

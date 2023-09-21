@@ -23,7 +23,7 @@ const projects = await getCollection("wedding");
           <Image
             class="projects__image"
             src={project.data.thumb}
-            alt="Wedding Photo, couple"
+            alt="Wedding photo, couple"
             width={360}
           />
         </a>
@@ -39,7 +39,8 @@ const projects = await getCollection("wedding");
     width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
-    padding-block: var(--spacer-xxl);
+    padding-block-start: var(--spacer-xxl);
+    padding-block-end: calc(var(--spacer-xxl) * 2);
   }
 
   .projects__heading {
