@@ -35,8 +35,8 @@ const showClose = currentPath != "/";
     top: var(--spacer-m);
     mix-blend-mode: difference;
     transition:
-      opacity var(--ease-0) ease-out,
-      filter var(--ease-0) ease-out;
+      opacity 0.6s cubic-bezier(0, 0, 0.6, 1),
+      filter 0.6s cubic-bezier(0, 0, 0.6, 1);
     opacity: 0;
     filter: blur(10px);
     z-index: 1;
