@@ -1,5 +1,6 @@
 const header = document.querySelector(".header");
 const modal = document.querySelector(".modal");
+const footer = document.querySelector("footer");
 const scrollThreshold = 0;
 let isContainerVisible = false;
 
@@ -19,14 +20,10 @@ function headerModalToggle() {
   const isVisible = scrollY <= scrollThreshold;
 
   header.classList.toggle("open", !isVisible);
-  modal.classList.toggle("bottom", isScrolledToBottom() && !isVisible);
   modal.classList.toggle("close", !isVisible);
   isContainerVisible = isVisible;
 
-  if (isScrolledToBottom() && !isContainerVisible) {
-    modal.classList.toggle("close");
-    isContainerVisible = true;
-  }
+  footer.classList.toggle("open", isScrolledToBottom());
 }
 
 function lazyLoad() {

@@ -1,0 +1,35 @@
+---
+export interface Props {
+  first: string;
+  second: string;
+}
+
+const { first, second } = Astro.props;
+---
+
+<footer class="footer">
+  <p>{first}</p>
+  <p>{second}</p>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: var(--container-width);
+    left: calc((100% - var(--container-width)) / 2);
+    top: calc(100% - var(--header-height) - 1rem);
+    font-size: var(--step-1);
+    transition:
+      opacity 0.6s cubic-bezier(0, 0, 0.6, 1),
+      filter 0.6s cubic-bezier(0, 0, 0.6, 1);
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  footer.open {
+    opacity: 1;
+    filter: blur(0px);
+  }
+</style>

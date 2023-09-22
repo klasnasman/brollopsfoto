@@ -6,6 +6,7 @@ import Header from "@components/Header.astro";
 import Info from "@components/Info.astro";
 import ProjectList from "@components/ProjectList.astro";
 import { Image } from "astro:assets";
+import Footer from "@components/Footer.astro";
 
 const weddings = await getCollection("wedding");
 const entry = await getEntry("about", "about");
@@ -35,6 +36,7 @@ const { Content } = await entry.render();
   </div>
   <Info Content={Content} />
   <ProjectList />
+  <Footer first="Klas Näsman" second="Wedding Photographer" />
 </BaseLayout>
 
 <style>

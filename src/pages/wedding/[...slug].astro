@@ -5,6 +5,7 @@ import ProjectList from "@components/ProjectList.astro";
 import Modal from "@components/Modal.astro";
 import Info from "@components/Info.astro";
 import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
 import { Image } from "astro:assets";
 
 interface Props {
@@ -47,6 +48,7 @@ const photos = entry.data.images;
   </div>
   <Info Content={Content} />
   <ProjectList />
+  <Footer first="Klas Näsman" second="Wedding Photographer" />
 </BaseLayout>
 
 <style>
