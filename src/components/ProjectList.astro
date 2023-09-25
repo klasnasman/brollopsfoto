@@ -3,26 +3,26 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 const currentPath = Astro.url.pathname;
-const projects = await getCollection("wedding");
+const weddings = await getCollection("wedding");
 ---
 
-<section class="projects">
-  <div class="projects__list">
-    <p class="projects__heading">Index</p>
+<section class="weddings">
+  <div class="weddings__list">
+    <p class="weddings__heading">Index</p>
     {
-      projects.map((project) => (
+      weddings.map((wedding) => (
         <a
-          class={`projects__link link ${
-            currentPath === `/wedding/${project.slug}/` ? "active" : ""
+          class={`weddings__link link ${
+            currentPath === `/wedding/${wedding.slug}/` ? "active" : ""
           }`}
-          href={`/wedding/${project.slug}`}>
-          <div class="projects__title">{project.data.title}</div>
-          <div class="projects__type">
-            <em>{project.data.location}</em>
+          href={`/wedding/${wedding.slug}`}>
+          <div class="weddings__title">{wedding.data.title}</div>
+          <div class="weddings__location">
+            <em>{wedding.data.location}</em>
           </div>
           <Image
-            class="projects__image"
-            src={project.data.thumb}
+            class="weddings__image"
+            src={wedding.data.thumb}
             alt="Wedding photo, couple"
             width={360}
           />
@@ -33,7 +33,7 @@ const projects = await getCollection("wedding");
 </section>
 
 <style>
-  .projects {
+  .weddings {
     display: flex;
     flex-direction: column;
     width: var(--container-width);
@@ -43,7 +43,7 @@ const projects = await getCollection("wedding");
     padding-block-end: calc(var(--spacer-xxl) * 2);
   }
 
-  .projects__heading {
+  .weddings__heading {
     padding-block-end: var(--spacer-s);
     text-transform: uppercase;
     margin-left: auto;
@@ -51,31 +51,31 @@ const projects = await getCollection("wedding");
   }
 
   @media (width<= 800px) {
-    .projects__heading {
+    .weddings__heading {
       padding-inline: var(--spacer-m);
     }
   }
 
-  .projects__list {
+  .weddings__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     z-index: 999;
   }
 
-  .projects__link {
+  .weddings__link {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-basis: 100%;
   }
 
-  .projects__image {
+  .weddings__image {
     display: none;
     z-index: 200;
   }
 
-  .projects__link:hover .projects__image {
+  .weddings__link:hover .weddings__image {
     display: block;
     position: absolute;
     top: 50%;
@@ -85,7 +85,7 @@ const projects = await getCollection("wedding");
   }
 
   @media (width<= 800px) {
-    .projects__link:hover .projects__image {
+    .weddings__link:hover .weddings__image {
       left: 50%;
     }
   }
