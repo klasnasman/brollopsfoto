@@ -21,7 +21,7 @@ const weddings = await getCollection("wedding");
             <em>{wedding.data.location}</em>
           </div>
           <Image
-            class="weddings__image"
+            class="wedding__thumb"
             src={wedding.data.thumb}
             alt="Wedding photo, couple"
             width={360}
@@ -70,12 +70,12 @@ const weddings = await getCollection("wedding");
     flex-basis: 100%;
   }
 
-  .weddings__image {
+  .wedding__thumb {
     display: none;
     z-index: 200;
   }
 
-  .weddings__link:hover .weddings__image {
+  .weddings__link:hover .wedding__thumb {
     display: block;
     position: absolute;
     top: 50%;
@@ -85,7 +85,7 @@ const weddings = await getCollection("wedding");
   }
 
   @media (width<= 800px) {
-    .weddings__link:hover .weddings__image {
+    .weddings__link:hover .wedding__thumb {
       left: 50%;
     }
   }
