@@ -8,26 +8,5 @@
         url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.svg#DomaineSansText-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-  font-family: 'Brown';
-  src: url('https://files.cargocollective.com/c169834/Brown-Regular.eot');
-  src: url('https://files.cargocollective.com/c169834/Brown-Regular.eot?#iefix') format('embedded-opentype'),
-    url('https://files.cargocollective.com/c169834/Brown-Regular.woff2') format('woff2'),
-    url('https://files.cargocollective.com/c169834/Brown-Regular.woff') format('woff'),
-    url('https://files.cargocollective.com/c169834/Brown-Regular.ttf') format('truetype'),
-    url('https://files.cargocollective.com/c169834/Brown-Regular.svg#Brown-Regular') format('svg');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-    font-family: 'SohneMono';
-    src: url('/fonts/soehne-mono-web.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
