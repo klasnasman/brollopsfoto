@@ -1,16 +1,17 @@
 @font-face {
-    font-family: 'Domaine Sans Text';
-    src: url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.eot');
-    src: url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.eot?#iefix') format('embedded-opentype'),
-        url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.woff2') format('woff2'),
-        url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.woff') format('woff'),
-        url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.ttf') format('truetype'),
-        url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.svg#DomaineSansText-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Domaine Sans Text';
+  src: url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.eot');
+  src: url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.eot?#iefix') format('embedded-opentype'),
+    url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.woff2') format('woff2'),
+    url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.woff') format('woff'),
+    url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.ttf') format('truetype'),
+    url('https://files.cargocollective.com/c169834/DomaineSansText-Regular.svg#DomaineSansText-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
+/* 
 @font-face {
   font-family: 'Brown';
   src: url('https://files.cargocollective.com/c169834/Brown-Regular.eot');
@@ -30,4 +31,4 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
