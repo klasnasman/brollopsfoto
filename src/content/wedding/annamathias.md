@@ -18,9 +18,6 @@ images:
   - ../../assets/wedding/annamathias/23.jpeg
   - ../../assets/wedding/annamathias/24.jpeg
   - ../../assets/wedding/annamathias/25.jpeg
-
-
-
 thumb: ../../assets/wedding/annamathias/19.jpeg
 ---
 
