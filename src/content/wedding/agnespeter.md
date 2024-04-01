@@ -27,14 +27,4 @@ images:
 thumb: ../../assets/wedding/agnespeter/29.jpeg
 ---
 
-<<<<<<< HEAD
 Agnes och Peter gifte sig på vackra Vässarö i Roslagens skärgård.
-=======
-Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Accusantium fugiat ipsam praesentium, provident impedit at odio sed libero
-similique ab, voluptates distinctio excepturi, ad hic? Necessitatibus quae
-ipsum aut iure. Numquam voluptas, itaque omnis laboriosam, deserunt vitae odio
-rerum, quis mollitia culpa nesciunt consectetur perspiciatis officiis natus
-enim accusantium dolorum distinctio voluptate dolores. Tenetur eum vitae
-inventore cum nemo consectetur!
->>>>>>> 4e5cff2744dc079b1e2987cb09e550c12e6ffe12
