@@ -1,7 +1,7 @@
 ---
 title: Linda + Theodor
 location: Svartsö
-date: 2019-08-24
+date: 2019.08.24
 images:
   - ../../assets/wedding/lindatheodor/02.jpeg
   - ../../assets/wedding/lindatheodor/04.jpeg

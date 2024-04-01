@@ -6,7 +6,7 @@ import ProjectList from "@components/ProjectList.astro";
 import Modal from "@components/Modal.astro";
 import Info from "@components/Info.astro";
 import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
+import Footer from "@components/XFooter.astro";
 
 interface Props {
   entry: CollectionEntry<"wedding">;
@@ -31,7 +31,7 @@ const photos = entry.data.images;
     <Header title={""} />
     <section class="index__section">
       {
-        photos.map((photo) => (
+        photos.map((photo: any) => (
           <div>
             <a id={entry.data.title}>
               <Image
@@ -46,9 +46,9 @@ const photos = entry.data.images;
       }
     </section>
   </div>
-  <Info Content={Content} />
+  <Info first={entry.data.title} second={entry.data.date} Content={Content} />
   <ProjectList />
-  <Footer />
+  <!-- <Footer /> -->
 </BaseLayout>
 
 <style>

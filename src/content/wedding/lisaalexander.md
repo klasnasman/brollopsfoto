@@ -1,7 +1,7 @@
 ---
 title: Lisa + Alexander
 location: Härnösand
-date: 2018-12-30
+date: 2018.12.30
 images:
   - ../../assets/wedding/lisaalexander/01.jpeg
   - ../../assets/wedding/lisaalexander/02.jpeg

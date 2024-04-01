@@ -1,7 +1,7 @@
 ---
 title: Tove + Erik
 location: Storhogna
-date: 2018-09-10
+date: 2018.09.10
 images:
   - ../../assets/wedding/toveerik/01.jpeg
   - ../../assets/wedding/toveerik/02.jpeg

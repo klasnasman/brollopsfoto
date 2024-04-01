@@ -5,7 +5,7 @@ const wedding = defineCollection({
     z.object({
       title: z.string(),
       location: z.string(),
-      date: z.date().optional(),
+      date: z.string().optional(),
       images: z.array(image()),
       thumb: image(),
     }),
