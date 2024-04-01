@@ -1,20 +1,16 @@
 ---
 export interface Props {
-  first: string;
-  second: string;
   Content: any;
 }
 
-const { first, second, Content } = Astro.props;
+const { Content } = Astro.props;
 const currentPath = Astro.url.pathname;
 const couple = currentPath === "/";
 ---
 
 <section id="info" class="flow">
   <div class="information flow">
-    <div class="heading-container">
-      <p class="heading">{first}, {second}</p>
-    </div>
+    <p class="heading">{couple ? "Klas Näsman, Bröllopsfotograf" : "Info"}</p>
     <Content />
   </div>
   {
@@ -22,7 +18,8 @@ const couple = currentPath === "/";
       <div class="contact">
         <p>
           <em>
-            <a href="mailto:">klasnasman@gmail.com</a>, <a href="https://www.instagram.com/klasnasman/">@klasnasman</a>
+            <a href="mailto:">klasnasman@gmail.com</a>,{" "}
+            <a href="https://www.instagram.com/klasnasman/">@klasnasman</a>
           </em>
         </p>
       </div>

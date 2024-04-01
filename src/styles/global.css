@@ -12,7 +12,7 @@ body {
 }
 
 .flow>*+* {
-    margin-top: var(--flow-space, 0.5em);
+    margin-top: var(--flow-space);
 }
 
 .lazy__load {

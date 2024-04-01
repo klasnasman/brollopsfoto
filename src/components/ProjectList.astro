@@ -39,12 +39,12 @@ const weddings = await getCollection("wedding");
     width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
-    padding-block-start: var(--spacer-xxl);
+    padding-block: var(--spacer-xxl);
     padding-block-end: calc(var(--spacer-xxl) * 2);
   }
 
   .weddings__heading {
-    padding-block-end: var(--spacer-s);
+    padding-block-end: var(--flow-space);
     text-transform: uppercase;
     margin-left: auto;
     margin-right: auto;
@@ -94,6 +94,5 @@ const weddings = await getCollection("wedding");
     position: relative;
     text-decoration: none;
     background-color: inherit;
-    transition: background var(--ease-0);
   }
 </style>

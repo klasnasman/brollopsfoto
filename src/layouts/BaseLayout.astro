@@ -1,6 +1,7 @@
 ---
 import "@styles/import.css";
 import Transitions from "@components/Transitions";
+import { AstroFont } from "astro-font";
 
 export interface Props {
   title: string;
@@ -40,6 +41,24 @@ const canonicalURL = (Astro.url.pathname, Astro.site);
     <script src="../assets/js/lazyHeaderModal.js"></script>
     <script src="../assets/js/activeSlug.js"></script>
     <script src="../assets/js/infoGoTo.js"></script>
+    <AstroFont
+      config={[
+        {
+          name: "Bliss Pro",
+          src: [
+            {
+              style: 'normal',
+              weight: '400',
+              path: '/assets/fonts/BlissPro.woff2'
+            },
+          ],
+          preload: true,
+          display: "block",
+          fallback: "sans-serif",
+        }
+      ]}
+    />
+  <!-- site by Out Surfing Studio -->
   </head>
   <body>
     <main class="main">
