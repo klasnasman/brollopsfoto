@@ -1,7 +1,7 @@
 const header = document.querySelector(".header");
 const modal = document.querySelector(".modal");
 /* const footer = document.querySelector("footer"); */
-const content = document.querySelector("index__container");
+const content = document.querySelector(".index__container");
 const scrollThreshold = 0;
 let isContainerVisible = false;
 
