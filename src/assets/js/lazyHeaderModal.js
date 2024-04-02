@@ -25,7 +25,7 @@ function headerModalToggle() {
   isContainerVisible = isVisible;
 
   /* footer.classList.toggle("open", isScrolledToBottom()); */
-  content.classList.toggle("open", isScrolledToBottom());
+  content.classList.toggle("close", isScrolledToBottom());
 }
 
 function lazyLoad() {
