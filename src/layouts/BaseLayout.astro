@@ -1,7 +1,8 @@
 ---
 import "@styles/import.css";
-import Transitions from "@components/Transitions";
 import { AstroFont } from "astro-font";
+import Transitions from "@components/Transitions";
+import Header from "@components/Header.astro";
 
 export interface Props {
   title: string;
@@ -16,21 +17,12 @@ const canonicalURL = (Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
-    <meta
-      name="Klas Näsman"
-      content="Wedding Photographer based in Stockholm, Sweden"
-    />
-    <meta
-      name="description"
-      content="Klas Näsman, Wedding Photographer based in Stockholm, Sweden."
-    />
+    <meta name="Klas Näsman" content="Wedding Photographer based in Stockholm, Sweden" />
+    <meta name="description" content="Klas Näsman, Wedding Photographer based in Stockholm, Sweden." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta property="og:title" content="Klas Näsman Wedding Photography" />
-    <meta
-      property="og:description"
-      content="Wedding Photographer based in Stockholm, Sweden"
-    />
+    <meta property="og:description" content="Wedding Photographer based in Stockholm, Sweden" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Klas Näsman Wedding Photography" />
     <meta name="theme-color" content="#000000" />
@@ -47,24 +39,40 @@ const canonicalURL = (Astro.url.pathname, Astro.site);
           name: "Bliss Pro",
           src: [
             {
-              style: 'normal',
-              weight: '400',
-              path: '/assets/fonts/BlissPro.woff2'
+              style: "normal",
+              weight: "400",
+              path: "/assets/fonts/BlissPro.woff2",
             },
           ],
           preload: true,
           display: "block",
           fallback: "sans-serif",
-        }
+        },
       ]}
     />
-  <!-- site by Out Surfing Studio -->
+    <!-- site by Out Surfing Studio -->
   </head>
   <body>
     <main class="main">
+      <Header title={""} />
       <Transitions client:load>
         <slot />
       </Transitions>
     </main>
   </body>
 </html>
+
+<style>
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: var(--images-inline);
+  }
+
+  @media (width <=750px) {
+    .main {
+      padding-inline: 1rem;
+    }
+  }
+</style>

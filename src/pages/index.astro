@@ -2,11 +2,9 @@
 import { getCollection, getEntry } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Modal from "@components/Modal.astro";
-import Header from "@components/Header.astro";
 import Info from "@components/Info.astro";
 import ProjectList from "@components/ProjectList.astro";
 import { Image } from "astro:assets";
-import Footer from "@components/XFooter.astro";
 
 const weddings = await getCollection("wedding");
 const entry = await getEntry("about", "about");
@@ -16,7 +14,6 @@ const { Content } = await entry.render();
 <BaseLayout title="Klas Näsman Wedding Photographer">
   <Modal first="Klas Näsman" second="Bröllopsfotograf" />
   <div class="index__container">
-    <Header title={""} />
     <section class="index__section">
       {
         weddings.map((entry) => (
@@ -43,7 +40,6 @@ const { Content } = await entry.render();
 
 <style>
   .index__container {
-    margin-inline: var(--images-inline);
     opacity: 1;
     filter: blur(0px);
     transition:
@@ -54,12 +50,6 @@ const { Content } = await entry.render();
   .index__container.close {
     opacity: 0;
     filter: blur(10px);
-  }
-
-  @media (width <=750px) {
-    .index__container {
-      margin-inline: unset;
-    }
   }
 
   .index__section div {
