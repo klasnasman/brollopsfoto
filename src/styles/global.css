@@ -34,5 +34,4 @@ body {
 
 :where(p) {
     color: var(--color-text);
-    text-wrap: pretty;
 }

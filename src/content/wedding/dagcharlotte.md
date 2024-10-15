@@ -20,10 +20,4 @@ images:
 thumb: ../../assets/wedding/dagcharlotte/01.jpg
 ---
 
-Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Accusantium fugiat ipsam praesentium, provident impedit at odio sed libero
-similique ab, voluptates distinctio excepturi, ad hic? Necessitatibus quae
-ipsum aut iure. Numquam voluptas, itaque omnis laboriosam, deserunt vitae odio
-rerum, quis mollitia culpa nesciunt consectetur perspiciatis officiis natus
-enim accusantium dolorum distinctio voluptate dolores. Tenetur eum vitae
-inventore cum nemo consectetur!
+Dag och Charlotte valde Maria Magdalena kyrka i Stockholm för sitt bröllop. Kyrkan ligger på Södermalm och har anor från 1300-talet.

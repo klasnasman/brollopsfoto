@@ -18,7 +18,8 @@
     --flow-space: 1em;
 
     --images-inline: 12rem;
-    --container-width: calc(min(100% - 2rem, 580px));
+    --container-width: calc(min(100% - 4rem, 580px));
+    --header-width: calc(min(100% - 2rem, 580px));
     --header-height: 32px;
     --header-height-neg: -32px;
 

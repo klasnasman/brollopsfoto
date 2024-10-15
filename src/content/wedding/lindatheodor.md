@@ -24,10 +24,4 @@ images:
 thumb: ../../assets/wedding/lindatheodor/17.jpeg
 ---
 
-Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Accusantium fugiat ipsam praesentium, provident impedit at odio sed libero
-similique ab, voluptates distinctio excepturi, ad hic? Necessitatibus quae
-ipsum aut iure. Numquam voluptas, itaque omnis laboriosam, deserunt vitae odio
-rerum, quis mollitia culpa nesciunt consectetur perspiciatis officiis natus
-enim accusantium dolorum distinctio voluptate dolores. Tenetur eum vitae
-inventore cum nemo consectetur!
+Linda och Theodor höll sitt bröllop på Svartsö, en plats där skärgården erbjöd en vacker och naturnära miljö för deras stora dag, sommaren 2019.

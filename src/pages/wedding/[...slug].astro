@@ -47,7 +47,7 @@ const photos = entry.data.images;
     </section>
   </div>
   <div class="info-list__container">
-    <Info Content={Content} />
+    <Info Content={Content} couple={entry.data.title} date={entry.data.date ?? ""} />
     <ProjectList />
   </div>
   <!-- <Footer /> -->

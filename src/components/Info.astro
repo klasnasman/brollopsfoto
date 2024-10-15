@@ -1,25 +1,30 @@
 ---
 export interface Props {
-  Content: any;
+  Content : any;
+  couple ?: string;
+  date   ?: string;
 }
 
-const { Content } = Astro.props;
+const { Content, couple, date } = Astro.props;
 const currentPath = Astro.url.pathname;
-const couple = currentPath === "/";
+const home = currentPath === "/";
 ---
 
 <section id="info" class="flow">
   <div class="information flow">
-    <p class="heading">{couple ? "Klas Näsman, Bröllopsfotograf" : "Info"}</p>
-    <Content />
+    <div class="heading__container">
+      <p class="heading">{home ? "Klas Näsman, Bröllopsfotograf" : `${couple}, ${date}`}</p>
+    </div>
+    <div class="content">
+      <Content />
+    </div>
   </div>
   {
-    couple && (
+    home && (
       <div class="contact">
-        <p>
+        <p class="contact__text">
           <em>
-            <a href="mailto:">klasnasman@gmail.com</a>,{" "}
-            <a href="https://www.instagram.com/klasnasman/">@klasnasman</a>
+            <a href="mailto:">klasnasman@gmail.com</a>, <a href="https://www.instagram.com/klasnasman/">@klasnasman</a>
           </em>
         </p>
       </div>
@@ -36,7 +41,15 @@ const couple = currentPath === "/";
   }
 
   .heading {
-    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .content {
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .contact__text {
     text-align: center;
   }
 </style>

@@ -27,4 +27,4 @@ images:
 thumb: ../../assets/wedding/agnespeter/29.jpeg
 ---
 
-Agnes och Peter gifte sig på vackra Vässarö i Roslagens skärgård.
+Agnes och Peter gifte sig en vacker höstdag på Vässarö, en charmig ö i Roslagens skärgård.

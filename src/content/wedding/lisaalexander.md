@@ -18,10 +18,4 @@ images:
 thumb: ../../assets/wedding/lisaalexander/14.jpeg
 ---
 
-Content: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Accusantium fugiat ipsam praesentium, provident impedit at odio sed libero
-similique ab, voluptates distinctio excepturi, ad hic? Necessitatibus quae
-ipsum aut iure. Numquam voluptas, itaque omnis laboriosam, deserunt vitae odio
-rerum, quis mollitia culpa nesciunt consectetur perspiciatis officiis natus
-enim accusantium dolorum distinctio voluptate dolores. Tenetur eum vitae
-inventore cum nemo consectetur!
+Lisa och Alexander, med rötter i norra Sverige, återvände till sina hemtrakter för att gifta sig i pittoreska Härnösand, vintern 2018.
