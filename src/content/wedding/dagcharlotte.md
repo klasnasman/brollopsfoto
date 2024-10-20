@@ -1,6 +1,6 @@
 ---
 title: Dag + Charlotte
-location: Maria Magdalena kyrka, Stockholm
+location: Maria Magdalena kyrka
 date: 2024.10.14
 images:
   - ../../assets/wedding/dagcharlotte/01.jpg
