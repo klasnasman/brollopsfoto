@@ -74,18 +74,14 @@ const photos = entry.data.images;
     }
   }
 
-  .index__section div {
-    display: grid;
+ .index__section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
   }
 
   .index__section > div {
     margin-block-end: 150px;
-  }
-
-  .index__section > div:nth-child(even) {
-    justify-content: flex-end;
   }
 
   @media (width <=750px) {
