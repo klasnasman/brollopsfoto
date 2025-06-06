@@ -17,6 +17,7 @@ const { first, second } = Astro.props;
     display: flex;
     position: fixed;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: var(--container-width);
 
     left: 50%;
@@ -33,6 +34,12 @@ const { first, second } = Astro.props;
     filter: blur(0px);
     mix-blend-mode: difference;
     z-index: 1;
+  }
+
+  @media (width <=750px) {
+    .modal {
+      justify-content: center;
+    }
   }
 
   .modal.close {
