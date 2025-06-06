@@ -34,12 +34,7 @@ const photos = entry.data.images;
         photos.map((photo: any) => (
           <div>
             <a id={entry.data.title}>
-              <Image
-                class="index__img lazy__load"
-                src={photo}
-                alt="Wedding Photo, couple"
-                width={1200}
-              />
+              <Image class="index__img lazy__load" src={photo} alt="Wedding Photo, couple" width={1200} />
             </a>
           </div>
         ))
@@ -74,10 +69,17 @@ const photos = entry.data.images;
     }
   }
 
- .index__section {
+  .index__section {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .index__section div:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
 
   .index__section > div {
@@ -95,8 +97,7 @@ const photos = entry.data.images;
   .index__img {
     min-width: inherit;
     min-height: inherit;
-    max-height: 600px;
-    max-width: 600px;
+    max-width: var(--image-width);
     object-fit: contain;
   }
 
@@ -106,11 +107,11 @@ const photos = entry.data.images;
     }
   }
 
-.info-list__container {
+  .info-list__container {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
 </style>

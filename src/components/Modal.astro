@@ -18,8 +18,12 @@ const { first, second } = Astro.props;
     position: fixed;
     justify-content: space-between;
     width: var(--container-width);
-    left: calc((100% - var(--container-width)) / 2);
+
+    left: 50%;
+    transform: translateX(-50%);
+
     top: calc((50% - var(--header-height)));
+
     font-size: var(--step-1);
     transition:
       opacity 0.6s cubic-bezier(0, 0, 0.6, 1),

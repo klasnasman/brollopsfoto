@@ -29,19 +29,19 @@ if (entry) {
     <section class="index__section">
       {
         featuredWedding && (
-          <div>
-              <Image
-                class="index__img lazy__load"
-                src={featuredWedding.data.thumb}
-                alt="Wedding Photo, couple"
-                width={1200}
-              />
+          <div class="index__featured">
+            <Image
+              class="index__img lazy__load"
+              src={featuredWedding.data.thumb}
+              alt="Wedding Photo, couple"
+              width={1200}
+            />
           </div>
         )
       }
       {
         weddings.map((entry) => (
-          <div>
+          <div class="index__weddings">
             <a id={entry.data.title} href={`/wedding/${entry.slug}`}>
               <Image class="index__img lazy__load" src={entry.data.thumb} alt="Wedding Photo, couple" width={1200} />
             </a>
@@ -73,15 +73,12 @@ if (entry) {
 
   .index__section div {
     display: grid;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  .index__section > div {
     min-height: 80dvh;
   }
+
   .index__section div:first-of-type {
     min-height: 100dvh;
+    justify-content: center;
   }
   .index__section > div:nth-child(even) {
     justify-content: flex-end;
@@ -98,8 +95,7 @@ if (entry) {
   .index__img {
     min-width: inherit;
     min-height: inherit;
-    max-height: 600px;
-    max-width: 600px;
+    max-width: var(--image-width);
     object-fit: contain;
   }
 
