@@ -8,7 +8,6 @@ body {
 
 .main {
     position: relative;
-    top: var(--header-height-neg);
 }
 
 .flow>*+* {
