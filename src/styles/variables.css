@@ -20,7 +20,7 @@
     --images-inline: 12rem;
     --site-width: 600px;
     --image-width: 800px;
-    --container-width: calc(min(100% - 4rem, var(--image-width) + 4rem));
+    --container-width: calc(min(100% - 2rem, var(--image-width) + 4rem));
     --header-width: calc(min(100% - 2rem, var(--site-width)));
     --header-height: 32px;
     --header-height-neg: -32px;
