@@ -17,7 +17,6 @@ const { first, second } = Astro.props;
     display: flex;
     position: fixed;
     justify-content: space-between;
-    flex-wrap: wrap;
     width: var(--container-width);
 
     left: 50%;
@@ -38,6 +37,7 @@ const { first, second } = Astro.props;
 
   @media (width <=750px) {
     .modal {
+      flex-wrap: wrap;
       justify-content: center;
     }
   }
