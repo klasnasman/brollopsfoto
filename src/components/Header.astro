@@ -8,26 +8,27 @@ const currentPath = Astro.url.pathname;
 const showClose = currentPath != "/";
 ---
 
-<header class="header">
+<header class={showClose ? "header header--between" : "header header--center"}>
   <p id="visibleSlug">{title}</p>
-  <div>
-    <p><a href="#info">INFO</a></p>
-    {
-      showClose && (
+  {
+    showClose && (
+      <div>
+        <p>
+          <a href="#info">INFO</a>
+        </p>
         <p>
           <a href="/">STÄNG</a>
         </p>
-      )
-    }
-  </div>
+      </div>
+    )
+  }
 </header>
 
 <style>
-  header {
+  .header {
     display: flex;
     flex-direction: row;
     position: sticky;
-    justify-content: space-between;
     align-items: baseline;
     width: var(--header-width);
     height: var(--header-height);
@@ -40,6 +41,14 @@ const showClose = currentPath != "/";
     opacity: 0;
     filter: blur(10px);
     z-index: 1;
+  }
+
+  .header--center {
+    justify-content: center;
+  }
+
+  .header--between {
+    justify-content: space-between;
   }
 
   header.open {
