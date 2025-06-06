@@ -1,63 +1,68 @@
 const setupObserver = () => {
   const isMobile = window.innerWidth < 750;
-  const threshold = isMobile ? 0.2 : 0.6; // Adjusted threshold for better control
-  const bottomMargin = isMobile ? "-200px" : "-100px"; // Adjust this value as needed
+  const threshold = isMobile ? 0.6 : 0.6; // Keep your original threshold
 
   const options = {
-    root: null, // The viewport
-    rootMargin: `0px 0px ${bottomMargin} 0px`, // Top, Right, Bottom, Left. Negative bottom margin means elements need to be further up to intersect.
+    root: null, // The viewport is the root
+    rootMargin: "0px", // No custom margin
     threshold: threshold,
   };
 
+  // Define your default title here
+  const defaultTitle = "Klas Näsman Bröllopsfotograf"; 
+
+  // Store references to all observed elements to check their intersection state
+  let observedElements = []; 
+
   const observer = new IntersectionObserver((entries) => {
     const visibleSlug = document.getElementById("visibleSlug");
-    const observedElements = Array.from(document.querySelectorAll(".index__section a[id], .info-list__container"));
-    const lastObservedElement = observedElements[observedElements.length - 1];
+    let topMostVisibleId = ""; // This will hold the ID of the highest visible element
 
-    let currentVisibleId = "";
-    let lastElementIntersecting = false;
-
-    entries.forEach(entry => {
-        if (entry.target === lastObservedElement) {
-            lastElementIntersecting = entry.isIntersecting;
+    // First, update the intersection status of all observed elements
+    // We'll iterate through `observedElements` to ensure we check in DOM order
+    // for the topmost visible one.
+    for (const element of observedElements) {
+      const entry = entries.find(e => e.target === element);
+      if (entry && entry.isIntersecting) {
+        // If this element is intersecting and we haven't found a topmost yet, set it
+        if (!topMostVisibleId) {
+          topMostVisibleId = element.id;
         }
-        // Prioritize the top-most intersecting element
-        if (entry.isIntersecting && entry.target.id && !currentVisibleId) {
-            currentVisibleId = entry.target.id;
-        }
-    });
-
-    if (currentVisibleId) {
-        // If an element is intersecting, display its ID
-        visibleSlug.textContent = currentVisibleId;
-    } else if (!lastElementIntersecting && observedElements.length > 0) {
-        // If no element is intersecting AND the last observed element is NOT intersecting
-        // (meaning we've scrolled past it and are at the very bottom), then clear the slug.
-        visibleSlug.textContent = ""; // Clear the slug
-    } else {
-        // Fallback for when nothing is intersecting at the very top or if initial state.
-        // You might want to get the initial header title here if needed.
-        const initialHeaderTitle = document.querySelector('header p[id="visibleSlug"]').dataset.initialTitle || "";
-        visibleSlug.textContent = initialHeaderTitle;
+      }
     }
 
+    // Now, apply the logic:
+    if (topMostVisibleId) {
+      // If any element is visible, show its ID
+      visibleSlug.textContent = topMostVisibleId;
+    } else {
+      // If NO elements are visible (scrolled to top, or past all content at bottom),
+      // set the default title.
+      visibleSlug.textContent = defaultTitle;
+    }
   }, options);
 
-  // Observe all project links within the main content area
-  document.querySelectorAll(".index__section a[id]").forEach((element) => {
+  // Collect all elements to observe once, and then observe them
+  // This helps us keep track of their order and total count.
+  const allObservableAnchors = document.querySelectorAll(".index__section a[id]");
+  const infoContainer = document.querySelector(".info-list__container");
+
+  // Ensure infoContainer has an ID for observation if it's your last section
+  if (infoContainer) {
+    infoContainer.id = infoContainer.id || "infoSection"; 
+  }
+
+  // Populate observedElements in DOM order
+  observedElements = Array.from(allObservableAnchors);
+  if (infoContainer) {
+    observedElements.push(infoContainer);
+  }
+
+  // Start observing
+  observedElements.forEach((element) => {
     observer.observe(element);
   });
-
-  // Also observe the info-list__container to treat it as the "last div"
-  const infoContainer = document.querySelector(".info-list__container");
-  if (infoContainer) {
-    // Add an ID to info-list__container if it doesn't have one, or use a data attribute
-    // For demonstration, let's assume it has an ID or we can add one.
-    // If you want its slug to be "Info" when it's visible, you'd add an ID:
-    infoContainer.id = infoContainer.id || "infoSection"; // Ensure it has an ID
-    observer.observe(infoContainer);
-  }
 };
 
-// Ensure the DOM is fully loaded before setting up the observer
+// Make sure the DOM is fully loaded before the script runs
 document.addEventListener('DOMContentLoaded', setupObserver);
