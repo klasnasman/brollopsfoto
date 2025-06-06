@@ -8,8 +8,8 @@ const { first, second } = Astro.props;
 ---
 
 <div class="modal">
-  <p>{first}</p>
-  <p>{second}</p>
+  <p class="modal__text-l">{first}</p>
+  <p class="modal__text-r">{second}</p>
 </div>
 
 <style>
@@ -33,6 +33,14 @@ const { first, second } = Astro.props;
     filter: blur(0px);
     mix-blend-mode: difference;
     z-index: 1;
+  }
+
+  .modal__text-l {
+    text-align: left;
+  }
+
+  .modal__text-r {
+    text-align: right;
   }
 
   .modal.close {
