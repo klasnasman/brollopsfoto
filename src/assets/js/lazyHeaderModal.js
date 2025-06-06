@@ -1,8 +1,6 @@
 const header = document.querySelector(".header");
 const modal = document.querySelector(".modal");
-/* const footer = document.querySelector("footer"); */
-/* const content = document.querySelector(".index__container"); */
-const scrollThreshold = 0;
+const scrollThreshold = 200;
 let isContainerVisible = false;
 
 const images = document.querySelectorAll(".lazy__load");
@@ -23,9 +21,6 @@ function headerModalToggle() {
   header.classList.toggle("open", !isVisible);
   modal.classList.toggle("close", !isVisible);
   isContainerVisible = isVisible;
-
-  /* footer.classList.toggle("open", isScrolledToBottom()); */
-  /* content.classList.toggle("close", isScrolledToBottom()); */
 }
 
 function lazyLoad() {

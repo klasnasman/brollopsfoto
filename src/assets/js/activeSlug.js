@@ -1,6 +1,6 @@
 const setupObserver = () => {
   const isMobile = window.innerWidth < 750;
-  const threshold = isMobile ? [0.6] : [0.6]; // Adjust the default threshold as needed
+  const threshold = isMobile ? [0.6] : [0.6];
 
   const options = {
     root: null,
@@ -10,6 +10,7 @@ const setupObserver = () => {
 
   const observer = new IntersectionObserver((entries) => {
     const visibleSlug = document.getElementById("visibleSlug");
+    console.log(visibleSlug);
 
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
