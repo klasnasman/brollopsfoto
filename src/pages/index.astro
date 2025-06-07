@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { getCollection, getEntry } from "astro:content";
 import Header from "@components/Header.astro";
@@ -22,7 +22,7 @@ if (entry) {
 }
 ---
 
-<BaseLayout title="Klas Näsman Bröllopsfotograf">
+<Layout>
   <Modal first="Klas Näsman" second="Bröllopsfotograf" />
   <div class="index__container">
     <Header title={""} />
@@ -55,7 +55,7 @@ if (entry) {
     <ProjectList />
   </div>
   <!-- <Footer /> -->
-</BaseLayout>
+</Layout>
 
 <style>
   .index__container {
