@@ -14,9 +14,9 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "astro": "^5.9.0",
-    "astro-font": "^0.0.78",
-    "framer-motion": "^10.12.18",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "astro-font": "^1.1.0",
+    "framer-motion": "^12.16.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }
