@@ -8,11 +8,10 @@ import Info from "@components/Info.astro";
 import ProjectList from "@components/ProjectList.astro";
 
 const weddings = await getCollection("wedding");
-
-const randomIndex = Math.floor(Math.random() * weddings.length);
-const featuredWedding = weddings[randomIndex];
-
 const entry = await getEntry("about", "about");
+
+const featuredWedding = weddings.find((w) => w.id === "annamathias.md");
+
 let Content;
 if (entry) {
   ({ Content } = await entry.render());
@@ -33,7 +32,7 @@ if (entry) {
             <Image
               class="index__img lazy__load"
               src={featuredWedding.data.thumb}
-              alt="Wedding Photo, couple"
+              alt="wedding photo, couple"
               width={1200}
             />
           </div>
