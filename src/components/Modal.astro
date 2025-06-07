@@ -19,10 +19,9 @@ const { first, second } = Astro.props;
     justify-content: space-between;
     width: var(--container-width);
 
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-
-    top: calc((50% - var(--header-height)));
+    transform: translate(-50%, -50%);
 
     font-size: var(--step-1);
     transition:
