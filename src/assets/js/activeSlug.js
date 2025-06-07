@@ -10,7 +10,6 @@ const setupObserver = () => {
 
   const observer = new IntersectionObserver((entries) => {
     const visibleSlug = document.getElementById("visibleSlug");
-    console.log(visibleSlug);
 
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
