@@ -3,21 +3,22 @@ import { AstroFont } from "astro-font";
 
 export interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const canonicalURL = (Astro.url.pathname, Astro.site);
+const fallbackDescription = "Klas Näsman, Bröllopsfotograf baserad i Stockholm.";
 ---
 
 <head>
   <meta charset="UTF-8" />
   <title>{title ? `${title} • Klas Näsman Bröllopsfotograf` : "Klas Näsman Bröllopsfotograf"}</title>
-  <meta name="Klas Näsman" content="Bröllopsfotograf baserad i Stockholm" />
-  <meta name="description" content="Klas Näsman, Bröllopsfotograf baserad i Stockholm." />
+  <meta name="description" content={description ? description : fallbackDescription} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
-  <meta property="og:title" content="Klas Näsman Bröllopsfoto" />
-  <meta property="og:description" content="Bröllopsfotograf baserad i Stockholm" />
+  <meta property="og:title" content={title ? `${title} • Klas Näsman Bröllopsfotograf` : "Klas Näsman Bröllopsfotograf"} />
+  <meta property="og:description" content={description ? description : fallbackDescription} />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Klas Näsman Bröllopsfoto" />
   <meta name="theme-color" content="#030712" />

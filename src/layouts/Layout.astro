@@ -3,12 +3,12 @@ import "@styles/import.css";
 import Transitions from "@components/Transitions";
 import Head from "./Head.astro";
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <Head title={title} />
+  <Head title={title} description={description} />
   <body>
     <main class="main">
       <Transitions client:load>

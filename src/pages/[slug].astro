@@ -21,11 +21,12 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const { body } = entry;
 const { Content } = await entry.render();
 const photos = entry.data.images;
 ---
 
-<Layout title={`${entry.data.title}`}>
+<Layout title={entry.data.title} description={body}>
   <Modal first={entry.data.title} second={entry.data.location} />
   <div class="index__container">
     <Header title={""} />
