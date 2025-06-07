@@ -18,4 +18,4 @@ images:
 thumb: ../../assets/wedding/lisaalexander/14.jpeg
 ---
 
-Lisa och Alexander, med rötter i norra Sverige, återvände till sina hemtrakter för att gifta sig i pittoreska Härnösand, vintern 2018.
+Lisa och Alexander, med rötter i norra Sverige, återvände till sina hemtrakter för att gifta sig i pittoreska Härnösand.

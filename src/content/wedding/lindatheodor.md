@@ -24,4 +24,4 @@ images:
 thumb: ../../assets/wedding/lindatheodor/17.jpeg
 ---
 
-Linda och Theodor höll sitt bröllop på Svartsö, en plats där skärgården erbjöd en vacker och naturnära miljö för deras stora dag, sommaren 2019.
+Linda och Theodor höll sitt bröllop på Svartsö, en plats där skärgården erbjöd en vacker och naturnära miljö för deras stora dag.

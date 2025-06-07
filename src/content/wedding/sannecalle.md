@@ -21,4 +21,4 @@ images:
 thumb: ../../assets/wedding/sannecalle/05.jpg
 ---
 
-Sanne och Calle höll sin vigsel i Stockholms stadshus. Den vacrka omgivningen med utsikt över Riddarfjärden skapade en minnesvärd inramning. Hösten 2024.
+Sanne och Calle höll sin vigsel i Stockholms stadshus. Den vacrka omgivningen med utsikt över Riddarfjärden skapade en minnesvärd inramning.

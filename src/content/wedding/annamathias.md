@@ -21,4 +21,4 @@ images:
 thumb: ../../assets/wedding/annamathias/19.jpeg
 ---
 
-Anna och Mathias höll sin vigsel på Muskö, en ö i Stockholms södra skärgård. Tidig höst 2019.
+Anna och Mathias höll sin vigsel på Muskö, en ö i Stockholms södra skärgård.

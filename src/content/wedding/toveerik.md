@@ -15,4 +15,4 @@ images:
 thumb: ../../assets/wedding/toveerik/02.jpeg
 ---
 
-Tove och Erik firade sin kärlek i det pittoreska Storhogna, en vacker fjällby i Jämtland känd för sin spektakulära natur. Vintern 2018.
+Tove och Erik firade sin kärlek i det pittoreska Storhogna, en vacker fjällby i Jämtland känd för sin spektakulära natur.

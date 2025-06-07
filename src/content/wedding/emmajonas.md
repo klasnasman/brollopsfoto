@@ -17,4 +17,4 @@ images:
 thumb: ../../assets/wedding/emmajonas/04.jpeg
 ---
 
-Emma och Jonas gifte sig i St. Annas skärgård, ett område känt för sina många öar och skär i Östergötlands kustband. Sommar 2019.
+Emma och Jonas gifte sig i St. Annas skärgård, ett område känt för sina många öar och skär i Östergötlands kustband.
