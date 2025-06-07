@@ -5,21 +5,21 @@ export interface Props {
 
 const { title } = Astro.props;
 const currentPath = Astro.url.pathname;
-const showClose = currentPath != "/";
+const showNav = currentPath != "/";
 ---
 
-<header class={showClose ? "header header--between" : "header header--center"}>
+<header class={showNav ? "header header--between" : "header header--center"}>
   <p id="visibleSlug">{title}</p>
   {
-    showClose && (
-      <div>
+    showNav && (
+      <nav>
         <p>
           <a href="#info">Info</a>
         </p>
         <p>
           <a href="/">Stäng</a>
         </p>
-      </div>
+      </nav>
     )
   }
 </header>
@@ -56,10 +56,10 @@ const showClose = currentPath != "/";
     filter: blur(0px);
   }
 
-  header > div {
+  nav {
     display: flex;
     flex-direction: row;
-    gap: 1.25rem;
+    gap: var(--spacer-m);
   }
 
   #visibleSlug {

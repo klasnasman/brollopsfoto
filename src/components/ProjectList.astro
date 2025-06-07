@@ -6,9 +6,9 @@ const currentPath = Astro.url.pathname;
 const weddings = await getCollection("wedding");
 ---
 
-<section class="weddings">
+<section class="weddings flow">
+  <p class="weddings__heading">Bröllop</p>
   <div class="weddings__list">
-    <p class="weddings__heading">Bröllop</p>
     {
       weddings.map((wedding) => (
         <a
@@ -29,13 +29,12 @@ const weddings = await getCollection("wedding");
   .weddings {
     display: flex;
     flex-direction: column;
-    width: var(--container-width);
+    width: var(--header-width);
     margin-left: auto;
     margin-right: auto;
   }
 
   .weddings__heading {
-    padding-block-end: var(--flow-space);
     margin-left: auto;
     margin-right: auto;
   }

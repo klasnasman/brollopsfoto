@@ -1,8 +1,8 @@
 ---
 export interface Props {
-  Content : any;
-  couple ?: string;
-  date   ?: string;
+  Content: any;
+  couple?: string;
+  date?: string;
 }
 
 const { Content, couple, date } = Astro.props;
@@ -10,19 +10,22 @@ const currentPath = Astro.url.pathname;
 const home = currentPath === "/";
 ---
 
-<section id="info" class="flow">
-  <div class="information flow">
-    <div class="heading__container">
-      <p class="heading">{home ? "Klas Näsman Bröllopsfotograf" : `${couple}, ${date}`}</p>
+<section id="info" class="info">
+  <div class="info__container flow">
+    <div class="info__heading-wrapper">
+      <p class="info__heading">
+        {home ? "Klas Näsman Bröllopsfotograf" : `${couple}, ${date}`}
+      </p>
     </div>
-    <div class="content">
+    <div class="info__content">
       <Content />
     </div>
   </div>
+
   {
     home && (
-      <div class="contact">
-        <p class="contact__text">
+      <div class="info__contact">
+        <p class="info__contact-text">
           <em>
             <a href="mailto:">klasnasman@gmail.com</a>, <a href="https://www.instagram.com/klasnasman/">@klasnasman</a>
           </em>
@@ -33,23 +36,33 @@ const home = currentPath === "/";
 </section>
 
 <style>
-  #info {
+  .info {
     width: var(--container-width);
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     padding: 0;
   }
 
-  .heading {
+  .info__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info__heading-wrapper {
     text-align: center;
   }
 
-  .content {
+  .info__heading {
+    text-align: center;
+  }
+
+  .info__content {
     text-align: center;
     text-wrap: balance;
+    max-width: 65ch;
   }
 
-  .contact__text {
+  .info__contact-text {
     text-align: center;
   }
 </style>
