@@ -11,7 +11,7 @@ const wedding = defineCollection({
     }),
 });
 const about = defineCollection({
-  schema: ({ image }) =>
+  schema: () =>
     z.object({
       title: z.string(),
       info: z.string(),
