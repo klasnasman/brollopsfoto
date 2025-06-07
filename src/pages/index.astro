@@ -42,8 +42,8 @@ if (entry) {
       {
         weddings.map((entry) => (
           <div class="index__weddings">
-            <a id={entry.data.title} href={`/brollop/${entry.slug}`}>
-              <Image class="index__img lazy__load" src={entry.data.thumb} alt="Wedding Photo, couple" width={1200} />
+            <a id={entry.data.title} href={`/${entry.slug}`}>
+              <Image class="index__img lazy__load" src={entry.data.thumb} alt="wedding photo, couple" width={1200} />
             </a>
           </div>
         ))
