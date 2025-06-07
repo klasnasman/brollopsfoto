@@ -17,7 +17,10 @@ const fallbackDescription = "Klas Näsman, Bröllopsfotograf baserad i Stockholm
   <meta name="description" content={description ? description : fallbackDescription} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
-  <meta property="og:title" content={title ? `${title} • Klas Näsman Bröllopsfotograf` : "Klas Näsman Bröllopsfotograf"} />
+  <meta
+    property="og:title"
+    content={title ? `${title} • Klas Näsman Bröllopsfotograf` : "Klas Näsman Bröllopsfotograf"}
+  />
   <meta property="og:description" content={description ? description : fallbackDescription} />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Klas Näsman Bröllopsfoto" />
@@ -32,12 +35,12 @@ const fallbackDescription = "Klas Näsman, Bröllopsfotograf baserad i Stockholm
   <AstroFont
     config={[
       {
-        name: "Untitled Serif",
+        name: "Domaine Sans",
         src: [
           {
             style: "normal",
             weight: "400",
-            path: "/assets/fonts/UntitledSerif-Regular.woff2",
+            path: "/assets/fonts/DomaineSansText-Regular.woff2",
           },
         ],
         preload: true,

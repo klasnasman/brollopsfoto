@@ -2,7 +2,7 @@
     --step-0: clamp(0.8rem, calc(0.60rem + 0.55vw), 0.875rem);
     --step-1: clamp(1rem, calc(0.85rem + 0.85vw), 1.25rem);
 
-    --ff-body: 'Untitled Serif', 'Domaine Sans Text', 'Bliss Pro', 'Brown', 'Futura', 'Geneva', 'Verdana', sans-serif;
+    --ff-body: 'Domaine Sans', 'Untitled Serif', 'Bliss Pro', 'Brown', 'Futura', 'Geneva', 'Verdana', sans-serif;
 
     --fw-light: 300;
     --fw-regular: 400;
