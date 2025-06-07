@@ -12,20 +12,13 @@ const weddings = await getCollection("wedding");
     {
       weddings.map((wedding) => (
         <a
-          class={`weddings__link link ${
-            currentPath === `/wedding/${wedding.slug}/` ? "active" : ""
-          }`}
+          class={`weddings__link link ${currentPath === `/wedding/${wedding.slug}/` ? "active" : ""}`}
           href={`/wedding/${wedding.slug}`}>
           <div class="weddings__title">{wedding.data.title}</div>
           <div class="weddings__location">
             <em>{wedding.data.location}</em>
           </div>
-          <Image
-            class="wedding__thumb"
-            src={wedding.data.thumb}
-            alt="Wedding photo, couple"
-            width={360}
-          />
+          <Image class="wedding__thumb" src={wedding.data.thumb} alt="Wedding photo, couple" width={360} />
         </a>
       ))
     }
@@ -57,7 +50,6 @@ const weddings = await getCollection("wedding");
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    z-index: 999;
   }
 
   .weddings__link {
@@ -69,7 +61,7 @@ const weddings = await getCollection("wedding");
 
   .wedding__thumb {
     display: none;
-    z-index: 200;
+    z-index: -1;
   }
 
   .weddings__link:hover .wedding__thumb {
@@ -87,9 +79,16 @@ const weddings = await getCollection("wedding");
     }
   }
 
+  @media (hover: hover) {
+    a.weddings__link.link:hover {
+      z-index: 300;
+    }
+  }
+
   .link {
     position: relative;
     text-decoration: none;
     background-color: inherit;
+    z-index: 100;
   }
 </style>
