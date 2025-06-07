@@ -12,8 +12,8 @@ const weddings = await getCollection("wedding");
     {
       weddings.map((wedding) => (
         <a
-          class={`weddings__link link ${currentPath === `/wedding/${wedding.slug}/` ? "active" : ""}`}
-          href={`/wedding/${wedding.slug}`}>
+          class={`weddings__link link ${currentPath === `/brollop/${wedding.slug}/` ? "active" : ""}`}
+          href={`/brollop/${wedding.slug}`}>
           <div class="weddings__title">{wedding.data.title}</div>
           <div class="weddings__location">
             <em>{wedding.data.location}</em>
