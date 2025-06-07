@@ -22,7 +22,7 @@ const { first, second } = Astro.props;
     left: 50%;
     transform: translateX(-50%);
 
-    top: 50%;
+    top: calc((50% - var(--header-height) - var(--spacer-m)));
 
     font-size: var(--step-1);
     transition:
