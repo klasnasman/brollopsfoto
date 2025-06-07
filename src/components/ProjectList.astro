@@ -63,13 +63,15 @@ const weddings = await getCollection("wedding");
     z-index: -1;
   }
 
-  .weddings__link:hover .wedding__thumb {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 180px;
+  @media (hover: hover) {
+    .weddings__link:hover .wedding__thumb {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 240px;
+    }
   }
 
   @media (width<= 800px) {
