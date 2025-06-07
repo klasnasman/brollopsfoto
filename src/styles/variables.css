@@ -30,7 +30,7 @@
     --z-main-above-curtain: 30;
     --z-nav: 40;
 
-    --color-bg: black;
-    --color-text: white;
+    --color-bg: #030712;
+    --color-text: #fbf9fa;
     --color-focus: hsl(52, 100%, 72%);
 }
